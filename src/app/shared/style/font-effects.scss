@@ -1,0 +1,28 @@
+%text-shadow-1 {
+  @include text-shadow($shadow-1);
+}
+
+%text-shadow-2 {
+  @include text-shadow($shadow-2);
+}
+
+%text-shadow-3 {
+  @include text-shadow($shadow-3);
+}
+
+%text-shadow-4 {
+  @include text-shadow($shadow-4);
+}
+
+%text-shadow-5 {
+  @include text-shadow($shadow-5);
+}
+
+/*
+	Esta parte abaixo, define o estilo das caixas de formatação padrão
+*/
+@for $i from 1 through 5 {
+	.text-effects-#{$i} {
+		@extend %text-shadow-#{$i};
+	}
+}

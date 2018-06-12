@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html data-ng-app="suaapp" data-ng-strict-di data-ng-controller="SuaAppCtrl">
+
+<head>
+  <title>Video Directive</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+</head>
+
+<body>
+  
+  <video-player data-player="player" src="'https://www.youtube.com/watch?v=LYSAAr6TpkA'"></video-player>
+  
+  <button data-ng-click="player.seekTo(120)"></button>
+  
+  <!--AngularJS -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script>
+    if (typeof angular == 'undefined') {
+      document.write('<script src="node_modules/angular/angular.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- JQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script>
+    if (typeof $ == 'undefined') {
+      document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>');
+    }
+  </script>
+
+  <!--ngRoute-->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+  <script>
+    try {
+      angular.module('ngRoute');
+    }
+    catch (err) {
+      document.write('<script src="node_modules/angular-route/angular-route.min.js"><\/script>');
+    }
+  </script>
+
+  <!--ngAria-->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+  <script>
+    try {
+      angular.module('ngAria');
+    }
+    catch (err) {
+      document.write('<script src="node_modules/angular-aria/angular-aria.min.js"><\/script>');
+    }
+  </script>
+
+  <!--ngAnimate-->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script>
+    try {
+      angular.module('ngAnimate');
+    }
+    catch (err) {
+      document.write('<script src="node_modules/angular-animate/angular-animate.min.js"><\/script>');
+    }
+  </script>
+
+  <!--ngCookies-->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-cookies.min.js"></script>
+  <script>
+    try {
+      angular.module('ngCookies');
+    }
+    catch (err) {
+      document.write('<script src="node_modules/angular-cookies/angular-cookies.min.js"><\/script>');
+    }
+  </script>
+
+  <!--ngMessages-->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js"></script>
+  <script>
+    try {
+      angular.module('ngMessages');
+    }
+    catch (err) {
+      document.write('<script src="node_modules/angular-messages/angular-messages.min.js"><\/script>');
+    }
+  </script>
+
+  <script src="app/app.js"></script>
+  <script src="app/constants.js"></script>
+  
+  <script src="app/shared/video-player/videoPlayer.js"></script>
+<!--  <script src="app/app.min.js"></script>-->
+</body>
+
+</html>

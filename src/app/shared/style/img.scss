@@ -1,0 +1,162 @@
+/*
+  Círculos para usar em imagens gerais quando se quer uma imagem redonda
+*/
+
+.img-circle {
+  border: 1px $color-grey-light solid;
+  @include border-radius(50%, 50%);
+  height: 5em;
+  width: 5em;
+}
+
+.img-circle.img-menu {
+  height: 3em;
+  width: 3em;
+}
+
+.img-circle.circle-mini {
+  @include border-radius(50%, 50%);
+  height: 2em;
+  width: 2em;
+}
+
+.img-circle.circle-big {
+  @include border-radius(50%, 50%);
+  height: 10em;
+  width: 10em;
+}
+
+
+// Classe para imagens que sejam utilizadas como fundo em páginas
+%bg-properties {
+  overflow: hidden;
+  background-color: $color-primary-light;
+  background-position: left top;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.bg-image {
+  //  background-size: cover;
+  height: 25em;
+  width: 100%;
+  @extend %bg-properties;
+}
+
+// Estilo para lista de imagens
+.image-list {
+  // max-height: 100%;
+  // max-width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+//Personalização para conjunto de logos (presente por exemplo no cadastro)
+.logo-gallery {
+  padding: 3em;
+}
+
+//Personalização para imagem única contendo todos os logos da galeria de logos
+.logo-gallery__image {
+  width:100%;
+}
+
+/*
+ * Estrutura quadrada para caixa de aplicações
+ */
+.application-icon {
+  @include border-radius(20%, 20%);
+  @include box-shadow($shadow-1);
+  
+  &__icon-size_mini {
+    height: 24px;
+    width: 24px;
+  }
+  
+  &__icon-size_small {
+    height: 48px;
+    width: 48px;
+  }
+  
+  &__icon-size_medium {
+    height: 96px;
+    width: 96px;
+  }
+  
+  &__icon-size_large {
+    height: 175px;
+    width: 175px;
+  }
+}
+
+
+/*
+ * Logo da aplicação no avatar do colecionador 
+ * exemplo: componentes/diretiva/seletor-aplicacao/partials/seletor-administrador
+ */
+.application-icon-subavatar{
+  width: 30px; 
+  height: 30px; 
+  position: relative;
+  background-size: cover; 
+  bottom: -70px;
+  right: -70px;            
+}    
+
+/*
+ * Estrutura circular para imagem de avatar
+ */
+.avatar-image {
+  background-size: 100% 100%;
+  background-position: center;
+  @include border-radius(50%, 50%);
+  
+  &__image-size_mini {
+    height: 24px;
+    width: 24px;
+  }
+  
+  &__image-size_small {
+    height: 48px;
+    width: 48px;
+  }
+  
+  &__image-size_medium {
+    height: 96px;
+    width: 96px;
+  }
+  
+  &__image-size_large {
+    height: 175px;
+    width: 175px;
+  }
+}
+
+/*
+ * Estrutura circular para tornar imagens circulares
+ */
+.circular-block {
+  @include border-radius(50%, 50%);
+  
+  &__circle-size_mini {
+    height: 24px;
+    width: 24px;
+  }
+  
+  &__circle-size_small {
+    height: 48px;
+    width: 48px;
+  }
+  
+  &__circle-size_medium {
+    height: 96px;
+    width: 96px;
+  }
+  
+  &__circle-size_large {
+    height: 175px;
+    width: 175px;
+  }
+}

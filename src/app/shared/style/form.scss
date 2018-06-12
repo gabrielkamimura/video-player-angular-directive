@@ -1,0 +1,27 @@
+.form-wallpaper {
+  margin: 0 auto;
+  height: 22em;
+  width: 90%;
+  border: 1px $color-grey-light solid;
+  max-width: 90%;
+}
+
+.link-button {
+  text-decoration:none;    
+  cursor:pointer;
+}
+
+.input-label--readonly {
+  background: none;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+//
+//
+md-input-container.md-custom-theme label, md-input-container.md-custom-theme .md-placeholder{
+    color: #555 !important; 
+}   

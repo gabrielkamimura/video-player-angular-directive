@@ -1,0 +1,26 @@
+.lista-pessoas.dialog-list {
+  max-height: $dialog-list-maxHeight;
+  overflow: overlay;
+}
+
+.list-item {
+  margin: 2px;
+}
+
+.clickable-list {
+  cursor: pointer;
+  &:hover {
+    background-color: #eee; //De acordo com as diretrizes do Material deve ser essa cor para tabelas de dados ao passar o mouse
+  }
+}
+
+.hover-list {
+  &:hover {
+    background-color: #eee; //De acordo com as diretrizes do Material deve ser essa cor para tabelas de dados ao passar o mouse
+  }
+}
+
+.quebraLinhaLista {
+    @include lineLimiter(1);    
+    overflow: auto;                
+}

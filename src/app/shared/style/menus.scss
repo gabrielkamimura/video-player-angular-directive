@@ -1,0 +1,72 @@
+/**
+ * Classe para botões utilizados em menus, sendo enfileirados verticalmente e colocados apenas um por linha
+ */
+.button-list {
+  vertical-align: central;
+  margin: auto 0;
+  text-align: left;
+  line-height: 2em;
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Classe para tabs transparentes com textos brancos
+ */
+
+.md-tabs-transparent {
+  color: $color-white;
+  opacity: .65;
+  .md-tab {
+    color: $color-white !important;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+/**
+ * Classe para tab na parte inferior de um elemento
+ */
+
+.md-tabs-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $container-maxWidth + 100px;
+  margin-bottom: 0;
+}
+/**
+ * Classe para definir características de submenus que podem ser empilhadas verticalmente 
+**/
+
+%submenu-properties {
+  display: block;
+  text-align: right;
+  float: right;
+  clear: both;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10em;
+}
+
+.nav-submenu-container {
+  width: 12em;
+}
+
+.nav-submenu {
+  @extend %submenu-properties;
+  max-height: 1.3em;
+}
+
+.nav-submenu-small {
+  @extend %submenu-properties;
+  font-size: 50%;
+}
+
+.login-info {
+  border-radius: 0 0 3em 0;
+}

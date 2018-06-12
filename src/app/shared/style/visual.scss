@@ -1,0 +1,104 @@
+// Arquivo com classes genéricas para visual
+
+.primary-color {
+  color: $color-primary;
+}
+
+.accent-color {
+  color: $color-secundary;
+}
+
+.grey-color{
+  color: $color-grey;
+}
+
+.primary-bg-color {
+  @include colors-atributes($color-primary-text, $color-primary);
+}
+
+.primary-light-bg-color {
+  $tmp-bg-color: lighten($color-primary, 7%);
+  @include colors-atributes($color-primary-text, $tmp-bg-color);
+}
+
+.box-background {
+  @include colors-atributes($color-text-default, $color-background);
+}
+
+.box-grey {
+  @include colors-atributes($color-grey, $color-grey-light);
+}
+
+.box-dark {
+  @include colors-atributes($color-grey, darken($color-grey, 20%));
+}
+
+.box-grey-light {
+  background-color: $color-grey-light;
+}
+
+//Insere ao box uma borda arredondada
+.box-radius {
+  @include border-radius(1em, 1em);
+}
+
+.accent-bg-color {
+  @include colors-atributes($color-secundary-text, $color-secundary);
+}
+
+body, .bc-main {
+  background-color: $color-background;
+}
+
+.mensagem.erro {
+  color: $color-danger;
+}
+
+.primary-title {
+  color: $color-primary;
+}
+
+.link-style {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.direita {
+  text-align: right;
+}
+
+.centralizado {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#Colecionador-tpl,
+#principal {
+  background-color: $color-background;
+}
+
+/*
+ * Sobrescrita de propriedades da barra lateral
+ */
+.bc-barra-esquerda {
+  background-color: $color-primary !important;
+  color: darken($color-white, 5%);
+
+  .material-icons {
+    color: darken($color-white, 5%);
+  }
+}
+
+.transparent-bar {
+  background: none !important;
+  color: $color-primary !important;
+}
+
+.barra-menu-logado {
+  background: $color-primary;
+  color: $color-white;
+
+  .material-icons {
+    color: $color-white !important;
+  }
+}

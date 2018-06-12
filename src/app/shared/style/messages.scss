@@ -1,0 +1,25 @@
+%message {
+  font-size: 0.7em;
+}
+
+.msg {
+  &-default {
+    @extend %message;
+  }
+  &-error {
+    @extend %message;
+    color: $color-danger;
+  }
+  &-primary {
+    @extend %message;
+    color: $color-primary;
+  }
+  &-accent {
+    @extend %message;
+    color: $color-secundary;
+  }
+  &-light {
+    @extend %message;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,33 @@
+// Este arquivo contém características de estilo genéricas que podem ser utilizados nas caixas de elementos
+
+.bc-shadow-1 {
+  @include box-shadow($shadow-1);
+}
+
+.bc-shadow-2 {
+  @include box-shadow($shadow-2);
+}
+
+.bc-shadow-3 {
+  @include box-shadow($shadow-3);
+}
+
+.bc-shadow-4 {
+  @include box-shadow($shadow-4);
+}
+
+.bc-shadow-5 {
+  @include box-shadow($shadow-5);
+}
+
+/*
+	Esta parte abaixo, define o estilo das caixas de formatação padrão
+*/
+@for $i from 1 through 5 {
+    .box-effects-#{$i} {
+      @extend .bc-shadow-#{$i};
+      background-color: $color-white;
+  }
+}
+
+

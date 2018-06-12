@@ -1,0 +1,129 @@
+// Este arquivo contém classes estruturais genéricas para utilização em diferentes páginas
+
+
+// Propriedades genéricas dos containeres
+%container-properties {
+  margin: 0 auto;
+  max-width: $container-maxWidth;
+  width: 100%;
+  margin-bottom: $size-margin-elements;
+}
+
+// Características genéricas para boxes
+%box-properties {
+  width: 100%;
+  margin-top: $size-margin-elements;
+  padding: $size-margin-elements;
+  @include box-sizing (border-box);
+}
+
+// Container padrão do BookCard para ser utilizado
+.bc-container {
+  @extend %container-properties;
+}
+
+// Container padrão para ser utilizado juntamente com uma imagem no topo da página (.bg-image)
+.bc-container-over-image {
+  @extend %container-properties;
+  margin-top: -2em;
+}
+
+// Container que pode ser utilizado em páginas que não contenham imagem no fundo
+.bc-container-up {
+  @extend %container-properties;
+  margin-top: 2em;
+}
+
+// Caixa genérica podendo ser colocada dentro de elementos dentro de um container
+.rectangular-box {
+  @extend %box-properties;
+}
+
+/**
+ *  Classe para cabeçalho da página. Feita para inserir uma imagem de largura máxima no topo de uma página
+ *  @todo -> remover dependência entre continente e conteúdo
+ */
+.cabecalho-pagina {
+  margin: $size-margin-elements;
+  margin-top: $size-margin-elements + 3em;
+  a, h1 {
+    color: $color-white;
+    text-decoration: none;
+    @include text-shadow ($shadow-1);
+  }
+  a:hover {
+    color: $color-secundary;
+  }
+}
+
+
+// Box que aplica um padding nos elementos
+.box-padding {
+  padding: 1em;
+}
+
+// Aproxima elemento a elemento superior 
+.box-proximity_top {
+  margin-top: 0;
+  margin-bottom: 3em;
+}
+
+//Aproxima elemento a elemento inferior
+.box-proximity_bottom {
+  margin-top: 3em;
+  margin-bottom: 0;
+}
+
+// Afasta elemento de elemento superior
+.box-separate_top {
+  margin-top: 3em;
+}
+
+//Afasta elemento de elemento inferior
+.box-separate_bottom {
+  margin-bottom: 3em;
+}
+
+/**
+ * Um fab que fica sobreposto à área acima
+ */
+.fab-overlap_top {
+  -webkit-transform: translate(0px, -28px);
+     -moz-transform: translate(0px, -28px); 
+      -ms-transform: translate(0px, -28px); 
+          transform: translate(0px, -28px); 
+  position: relative; 
+  top: 0; 
+  right: 28px;
+}
+
+/**
+ * Uma área a ser colocada sobre área acima (uma box-overlaid)
+ */
+.box-overlap_top {
+  margin-top: -30vh;
+}
+
+/**
+ * A área que fica abaixo de um elemento com box-overlap-top
+ */
+.box-overlaid {
+  height: 40vh; 
+  width: 100%;
+  background-size: cover;
+}
+
+.resultado-nulo-texto{
+    width: 100%;
+    text-align: center;
+    color: $color-secundary-text;
+    max-width: 400px;
+}
+
+.resultado-nulo-img{
+    max-width: 400px;    
+    width : 100%;
+    margin-top: 100px;
+    font-size:150px;
+    color: $color-secundary-text;
+}

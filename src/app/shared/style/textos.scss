@@ -1,0 +1,124 @@
+
+/**
+ ---- Classes para limitar numero de linhas em textos ----
+*/
+.limitar-1-linha {
+  @include lineLimiter(1);
+  white-space: nowrap;
+}
+
+.limitar-2-linhas {
+  @include lineLimiter(2);
+}
+
+.limitar-3-linhas {
+  @include lineLimiter(3);
+}
+
+.badge {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    /*background-color: #384d89;*/      
+    /*background-color: yellow;*/
+    /*color: #fff;*/
+    background-color: #f0d863;
+    color: #333;
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -6px;
+}
+
+.badge-list{
+	width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    background-color: #384d89;
+    /*background-color: #f0d863;  */
+    color: #fff;
+    /*color: #333;*/
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -6px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-nopadding{
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    font-size: 18px;
+    max-width: 540px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 1.5;
+}
+
+ul, ol {
+    font-size: 18px;
+    max-width: 540px;
+    margin-top: 29px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+/**
+ * Estilização para áreas especializadas em leitura, áreas otimizadas para artigos
+ */
+.bc-reading-area {
+  margin: 0 auto;
+  max-width: 540px;
+
+  img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+::selection {
+    color: $color-secundary-text; 
+    background: $color-secundary;
+}
+::-moz-selection { 
+    color: $color-secundary-text;
+    background: $color-secundary;
+}

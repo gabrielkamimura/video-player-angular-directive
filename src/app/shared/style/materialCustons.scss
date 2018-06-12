@@ -1,0 +1,38 @@
+
+// Retirando por padrão o fundo dos subheaders
+.md-subheader {
+  background: none !important;
+}
+
+
+/* -----------------------------------------------------------------------------
+    Problemas de posicionamento dos md-fab buttons
+   ----------------------------------------------------------------------------- */
+
+.md-fab-bottom-left,
+.md-fab-bottom-right,
+.md-fab-top-left,
+.md-fab-top-right {
+  position: fixed !important;
+}
+
+.md-fab-bottom-right {
+  bottom: 20px !important;
+  right: 20px !important;
+}
+
+// Label para subgrupo de um um menu
+md-menu-content .md-subheader {
+    margin-bottom: 16px;
+    color: $color-grey;
+    text-transform: uppercase;
+}
+
+// Dialog fullscreen
+.fullscreen-dialog {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}

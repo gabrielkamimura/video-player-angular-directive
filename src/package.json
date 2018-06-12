@@ -1,0 +1,30 @@
+{
+  "name": "suaapp",
+  "description": "Aplicaçao front-end base para ser modificada",
+  "dependencies": {
+    "http-server": "^0.6.1",
+    "gulp": "*",
+    "gulp-sass": "2.3.2",
+    "gulp-clean-css": "*",
+    "gulp-css-globbing": "*",
+    "gulp-replace-task": "0.11.0",
+    "yargs": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "fs": "*",
+    "express": "*",
+      
+    "angular": "1.6.6",
+    "angular-route": "1.6.6",
+    "angular-animate": "1.6.6"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server"
+  },
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
