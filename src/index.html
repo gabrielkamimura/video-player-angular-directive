@@ -9,9 +9,11 @@
 
 <body>
   
-  <video-player data-player="player" src="'https://www.youtube.com/watch?v=LYSAAr6TpkA'"></video-player>
+  <video-player data-player="player" src="https://www.youtube.com/watch?v=LYSAAr6TpkA"></video-player>
   
-  <button data-ng-click="player.seekTo(120)"></button>
+  <video-player data-player="player2" src="https://vimeo.com/195304295"></video-player>
+  
+  <button data-ng-click="player.seekTo(120); player2.seekTo(120)">Ir para os 2:00</button>
   
   <!--AngularJS -->
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
